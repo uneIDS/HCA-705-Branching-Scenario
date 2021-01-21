@@ -174,7 +174,7 @@ You have faith in her judgement (click: &quot;You have faith in her judgement&qu
 [[You decide to do a bit more research and give her an opinion -&gt;Email with Grant Writer]] </tw-passagedata><tw-passagedata pid="21" name="Hazard Mitigation Plan" tags="pdf" position="1335.6666666666667,472.66666666666663" size="100,100">{(set: $mitigationPlan to true)}
 (if: (history:) contains &quot;Email with Grant Writer&quot;)[[[Return-&gt;Email with Grant Writer]]](elseif: (history:) contains &quot;Meeting with Grant Writer&quot;)[[[Return-&gt;Meeting with Grant Writer]]] 
 &lt;hr&gt;&lt;!--Note for above, the one latest in the scenario must come first--&gt;
-&lt;iframe src=&quot;https://drive.google.com/file/d/1Ajvza-6N3e5NoXQIIJUwBaXA8h1_w_-U/view&quot; width=&quot;780&quot; height=&quot;700&quot; frameBorder=&quot;0&quot;&gt;&lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="22" name="Week 2 Summary" tags="" position="1697.6666666666667,1799.6666666666667" size="100,100">{(save-game: &quot;A&quot;)} 
+&lt;iframe src=&quot;https://drive.google.com/file/d/1Ajvza-6N3e5NoXQIIJUwBaXA8h1_w_-U/view&quot; width=&quot;780&quot; height=&quot;700&quot; frameBorder=&quot;0&quot;&gt;&lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="22" name="Week 2 Summary" tags="" position="1696,1799.6666666666667" size="100,100">{(save-game: &quot;A&quot;)} 
 (link: &quot;Save game&quot;)[ You have saved the game!]
 (if: $loadCount &gt;1)[(goto: &quot;Week 3 Introduction&quot;)]</tw-passagedata><tw-passagedata pid="23" name="Week 3 Introduction" tags="weekIntro" position="2602.6666666666665,348" size="100,100">While nothing too bad happened, the severe strom from last month really brought how unprepared your community is for a true disaster event. It also didn&#39;t help that you forgot the name of the Folly Beach Fire Chief...
 
@@ -282,11 +282,11 @@ The day comes to an end (click: &quot;The day roast comes to an end&quot;)[(goto
 (link: &quot;Week Four&quot;)[(goto: &quot;Week 4 Backup&quot;)]
 (link: &quot;Week Five&quot;)[(goto: &quot;Week 5 Backup&quot;)]
 (link: &quot;Week Six&quot;)[(goto: &quot;Week 6 Backup&quot;)]
-(link: &quot;Week Seven&quot;)[(goto: &quot;Week 7 Backup&quot;)]</tw-passagedata><tw-passagedata pid="40" name="Home Screen" tags="" position="1001,138" size="100,100">
+(link: &quot;Week Seven&quot;)[(goto: &quot;Week 7 Backup&quot;)]</tw-passagedata><tw-passagedata pid="40" name="Home Screen" tags="" position="1002.6666666666666,138" size="100,100">
 *TITLE SCREEN IN DEVELOPMENT*
 
 (link: &quot;Load Game&quot;)[(if: $Saves contains &quot;A&quot;)[(load-game: &quot;A&quot;)(set: $loadCount to it + 1)](else:)[(goto: &quot;Did not Save&quot;)]]
-Start New Game (click: &quot;Start New Game&quot;)[(goto: &quot;Week 1 Introduction&quot;)] </tw-passagedata><tw-passagedata pid="41" name="Week 2 Backup" tags="backup" position="1701,198" size="100,100">{
+Start New Game (click: &quot;Start New Game&quot;)[(save-game: &quot;A&quot;)(goto: &quot;Week 1 Introduction&quot;)] </tw-passagedata><tw-passagedata pid="41" name="Week 2 Backup" tags="backup" position="1701,198" size="100,100">{
 (set: $inventory to (a:))
 (set: $firstChoiceCount to 0)
 (set: $preparationLevel to 0)
