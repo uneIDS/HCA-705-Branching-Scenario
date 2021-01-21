@@ -130,8 +130,7 @@ Based on your budget, you can choose one of the following options:
 2.	(link: &quot;Hire two new communications and technology specialists and Fund fifty members of the Charleston Fire Department, City and County Law Enforcement agencies, and Charleston County EMS to attend a 7 day terrorist preparedness and response training program.&quot;)[(if: $firstChoiceCount &lt;1)[(set:$inventory to it + (a: &quot;Communications Specialists&quot;, &quot;Terrorism Preparedness Training&quot;))(set: $firstChoiceCount to it+1)](else:)[ You can only pick one option]]
 3.	(link: &quot;Fund a new combined fire, EMS, and law enforcement all hazards response team.&quot;)[(if: $firstChoiceCount &lt;1)[(set:$inventory to it + (a: &quot;All-Hazard Response&quot;))(set: $firstChoiceCount to it+1)](else:)[ You can only pick one option]]
 4.	(link: &quot;Install new generators in two area schools and the North Charleston Coliseum and stockpile supplies to convert them into shelters and fund fifty members of the Charleston Fire Department, City and County Law Enforcement agencies, and Charleston County EMS to attend a 7 day terrorist preparedness and response training program.&quot;)[(if: $firstChoiceCount &lt;1)[(set:$inventory to it + (a: &quot;Generators&quot;, &quot;New shelters&quot;, &quot;Terrorism Preparedness Training&quot;))(set: $firstChoiceCount to it+1)](else:)[ You can only pick one option]]
-(event: when $firstChoiceCount  is 1)[(goto: &quot;Week One Summary&quot;)]</tw-passagedata><tw-passagedata pid="16" name="Week One Summary" tags="" position="602.3333333333334,1801" size="100,100">{(save-game: &quot;A&quot;)} 
-These are the choices you&#39;ve made so far: (print: $inventory)
+(event: when $firstChoiceCount  is 1)[(goto: &quot;Week One Summary&quot;)]</tw-passagedata><tw-passagedata pid="16" name="Week One Summary" tags="" position="584,1821" size="100,100">{(save-game: &quot;A&quot;)} 
 (link: &quot;Save game&quot;)[ You have saved the game!]
 (if: $loadCount &gt;0)[(goto: &quot;Week 2 Introduction&quot;)]</tw-passagedata><tw-passagedata pid="17" name="Week 2 Introduction" tags="weekIntro" position="1699,353" size="100,100">A few months have gone by and you&#39;ve settled into your new job and city quite well. Each week you feel more confident about the choices that you&#39;ve made in the past. Of course, you still get plenty of questions from Commissioners (if: $inventory contains &quot;Communications Specialists&quot; and &quot;Generators&quot;)[Jones and Brown](elseif: $inventory contains &quot;Communications Specialists&quot; and &quot;Terrorism Preparedness Training&quot;)[Shah and Brown](elseif: $inventory contains &quot;All-Hazard Response&quot;)[Williams, Shah, and Brown](elseif: $inventory contains &quot;Generators&quot; and &quot;Terrorism Preparedness Training&quot;)[Williams and Brown] about next year&#39;s budget. 
 
@@ -176,7 +175,6 @@ You have faith in her judgement (click: &quot;You have faith in her judgement&qu
 (if: (history:) contains &quot;Email with Grant Writer&quot;)[[[Return-&gt;Email with Grant Writer]]](elseif: (history:) contains &quot;Meeting with Grant Writer&quot;)[[[Return-&gt;Meeting with Grant Writer]]] 
 &lt;hr&gt;&lt;!--Note for above, the one latest in the scenario must come first--&gt;
 &lt;iframe src=&quot;https://drive.google.com/file/d/1Ajvza-6N3e5NoXQIIJUwBaXA8h1_w_-U/view&quot; width=&quot;780&quot; height=&quot;700&quot; frameBorder=&quot;0&quot;&gt;&lt;/iframe&gt;</tw-passagedata><tw-passagedata pid="22" name="Week 2 Summary" tags="" position="1697.6666666666667,1799.6666666666667" size="100,100">{(save-game: &quot;A&quot;)} 
-These are the choices you&#39;ve made so far: (print: $inventory)
 (link: &quot;Save game&quot;)[ You have saved the game!]
 (if: $loadCount &gt;1)[(goto: &quot;Week 3 Introduction&quot;)]</tw-passagedata><tw-passagedata pid="23" name="Week 3 Introduction" tags="weekIntro" position="2602.6666666666665,348" size="100,100">While nothing too bad happened, the severe strom from last month really brought how unprepared your community is for a true disaster event. It also didn&#39;t help that you forgot the name of the Folly Beach Fire Chief...
 
@@ -275,7 +273,6 @@ Boy was that a fun event! South Carolina provided you with a beautiful summer da
 You were kept so busy, however, that you weren’t able to meet as many people as you would have liked. As a result, you’re unsure as to the effectiveness of the event. 
 
 The day comes to an end (click: &quot;The day roast comes to an end&quot;)[(goto: &quot;Week 3 Summary&quot;)]</tw-passagedata><tw-passagedata pid="37" name="Week 3 Summary" tags="" position="2601.3333333333335,1801" size="100,100">{(save-game: &quot;A&quot;)} 
-These are the choices you&#39;ve made so far: (print: $inventory)
 (link: &quot;Save game&quot;)[ You have saved the game!]
 (if: $loadCount &gt;2)[(goto: &quot;Week 4 Introduction&quot;)]</tw-passagedata><tw-passagedata pid="38" name="Startup" tags="startup" position="1200,9" size="100,100">{
 (set: $loadCount to 0)
@@ -369,8 +366,7 @@ First, you skim through some [[reference materials]]
 * &lt;a href=&quot;https://www.fema.gov/emergency-managers/national-preparedness/frameworks/urban-search-rescue&quot; target=&quot;_blank&quot;&gt;Urban Search and Rescue&lt;/a&gt;
 * &lt;a href=&quot;https://www.nvoad.org/about-us/&quot; target=&quot;_blank&quot;&gt;NVOAD&lt;/a&gt;
 
-[[Return -&gt;Storm Changes Course]] </tw-passagedata><tw-passagedata pid="49" name="Week 4 Summary" tags="" position="3401.6666666666665,1797.6666666666667" size="100,100">{(save-game: &quot;A&quot;)} 
-These are the choices you&#39;ve made so far: (print: $inventory)
+[[Return -&gt;Storm Changes Course]] </tw-passagedata><tw-passagedata pid="49" name="Week 4 Summary" tags="" position="3401.6666666666665,1799.3333333333335" size="100,100">{(save-game: &quot;A&quot;)} 
 (link: &quot;Save game&quot;)[ You have saved the game!]
 (if: $loadCount &gt;3)[(goto: &quot;Week 5 Introduction&quot;)]</tw-passagedata><tw-passagedata pid="50" name="Week 4 Decision" tags="" position="3400,984.3333333333334" size="100,100">{
 (set: $fourthChoiceCount to 0)
@@ -398,8 +394,7 @@ You choose to:
 (link: &quot;Restore the Electrical Grid&quot;)[(if: $fifthChoiceCount &lt;1)[(set:$inventory to it + (a: &quot;Electric Grid&quot;))(set: $fifthChoiceCount to it+1)]]
 (link: &quot;Relocate displaced victims to shelters.&quot;)[(if: $fifthChoiceCount &lt;1)[(set:$inventory to it + (a: &quot;Relocate to Shelters&quot;))(set: $fifthChoiceCount to it+1)]]
 (link: &quot;Request external response assets&quot;)[(if: $fifthChoiceCount &lt;1)[(set:$inventory to it + (a: &quot;External Assets&quot;))(set: $fifthChoiceCount to it+1)]]
-(event: when $fifthChoiceCount is 1)[(goto: &quot;Week 5 Summary&quot;)]</tw-passagedata><tw-passagedata pid="54" name="Week 5 Summary" tags="" position="4001.6666666666665,1799.6666666666667" size="100,100">{(save-game: &quot;A&quot;)} 
-These are the choices you&#39;ve made so far: (print: $inventory)
+(event: when $fifthChoiceCount is 1)[(goto: &quot;Week 5 Summary&quot;)]</tw-passagedata><tw-passagedata pid="54" name="Week 5 Summary" tags="" position="4001.6666666666665,1798" size="100,100">{(save-game: &quot;A&quot;)} 
 (link: &quot;Save game&quot;)[ You have saved the game!]
 (if: $loadCount &gt;4)[(goto: &quot;Week 6 Introduction&quot;)]</tw-passagedata><tw-passagedata pid="55" name="Week 4 Backup" tags="backup" position="3398,204" size="100,100">{
 (set: $inventory to (a:))
@@ -560,7 +555,6 @@ You direct your staff to focus on:
 (if: not ($inventory contains &quot;Temporary Network&quot;))[(link: &quot;Developing wide are fixed wireless internet access&quot;)[(if: $sixthChoiceCount &lt;1)[(set:$inventory to it + (a: &quot;Temporary Network Later&quot;))(set: $sixthChoiceCount to it+1)]](else:)[(link: &quot;Securing grant funding and loans for replacement and repair of public safety infrastructure.&quot;)[(if: $sixthChoiceCount &lt;1)[(set: $inventory to it + (a: &quot;Infrastructure Grant&quot;))(set: $sixthChoiceCount to it + 1)]]]]
 (link: &quot;Mitigation by informing and empowering Charleston Countians to rebuild in a more resilient way.&quot;)[(if: $sixthChoiceCount &lt;1)[(set:$inventory to it + (a: &quot;Community Education&quot;))(set: $sixthChoiceCount to it+1)]]
 (event: when $sixthChoiceCount is 1)[(goto: &quot;Week 6 Summary&quot;)]</tw-passagedata><tw-passagedata pid="66" name="Week 6 Summary" tags="" position="4501,1800" size="100,100">{(save-game: &quot;A&quot;)} 
-These are the choices you&#39;ve made so far: (print: $inventory)
 (link: &quot;Save game&quot;)[ You have saved the game!]
 (if: $loadCount &gt;5)[(goto: &quot;Week 7 Introduction&quot;)]</tw-passagedata><tw-passagedata pid="67" name="Week 7 Introduction" tags="weekIntro" position="5531,320" size="100,100">The past few months have been crazy. You think back on the choices that you made throughout the year. 
 
